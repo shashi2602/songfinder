@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 const FileUploader = ({ setStatus, setSong, setError, setRecording }) => {
+  
   const handleFileChange = (event) => {
     setRecording(true);
     const file = event.target.files[0];
@@ -11,7 +12,7 @@ const FileUploader = ({ setStatus, setSong, setError, setRecording }) => {
       setStatus("Finding song");
       axios
         .post(
-          process.env.REACT_APP_API_URL,
+          import.meta.env.VITE_API_URL,
           data
         )
         .then((response) => {

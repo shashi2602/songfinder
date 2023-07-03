@@ -32,7 +32,7 @@ const AudioRecorder = () => {
           setStatus("Finding song");
           axios
             .post(
-              process.env.REACT_APP_API_URL,
+              import.meta.env.VITE_API_URL,
               data
             )
             .then((response) => {
