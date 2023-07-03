@@ -11,14 +11,13 @@ const FileUploader = ({ setStatus, setSong, setError, setRecording }) => {
       setStatus("Finding song");
       axios
         .post(
-          "https://honestbeneficialbackend.shashippk.repl.co/findSong",
+          process.env.REACT_APP_API_URL,
           data
         )
         .then((response) => {
           setStatus("");
           setRecording(false);
           setSong(response.data);
-          console.log(response.data);
         })
         .catch((error) => {
           setError(error);
