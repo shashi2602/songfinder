@@ -29,7 +29,7 @@ const AudioRecorder = () => {
           });
           const data = new FormData();
           data.append("file", blob);
-          setStatus("Finding song");
+          setStatus("Finding");
           axios
             .post(
               import.meta.env.VITE_API_URL,

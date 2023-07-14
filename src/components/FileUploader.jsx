@@ -9,7 +9,7 @@ const FileUploader = ({ setStatus, setSong, setError, setRecording }) => {
     if (file) {
       const data = new FormData();
       data.append("file", file);
-      setStatus("Finding song");
+      setStatus("Finding");
       axios
         .post(
           import.meta.env.VITE_API_URL,

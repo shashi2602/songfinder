@@ -8,9 +8,10 @@ export default function MusicCard({ song }) {
         borderRadius: "0.375rem",
         borderWidth: "2px",
         borderColor: "#000000",
+        margin:"10px"
       }}
     >
-      <div style={{ display: "flex", margin: "0.5rem", gap: "0.75rem" }}>
+      <div style={{ display: "flex", margin: "0.5rem", gap: "0.75rem" ,flexWrap:"wrap",justifyContent:'center'}}>
         <div
           style={{
             backgroundImage: `url(${song?.cover_art})`,
